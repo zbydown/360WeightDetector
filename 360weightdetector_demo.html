@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="NexusPHP" />
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>  
+	<script type="text/javascript" src="360weightdetector.min.js"></script>
+</head>
+<body>
+<script>
+var _ua = window.navigator.userAgent;
+if((/Chrome\/([\d.])+\sSafari\/([\d.])+$/).test(_ua)){
+	document.writeln("经测试，您正在使用Chromium内核的浏览器，权重最高的浏览器为"+chrome_weight.result);
+	document.writeln("<br/><br/>四个浏览器所占权重从高到低分别为:<br/>");
+	for(var i = 0;i < chrome_weight.sorted.length ;i++){
+		document.writeln(chrome_weight.sorted[i][0]+" : "+chrome_weight.sorted[i][1]+'<br/>');
+	}
+}
+else{
+	document.writeln("经测试，您未使用Chromium内核的浏览器。此程序不能运作。");
+}
+				
+</script>
+</body>	

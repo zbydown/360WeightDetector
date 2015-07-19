@@ -1,5 +1,5 @@
 var chrome_weight = {
-	"result": "chrome",
+	"result": "Chrome",
 	"details": {
 		"Chrome" : 5,
 		"Chromium": 0,
@@ -104,8 +104,9 @@ var chrome_weight = {
 				for (var value in chrome_result)
 				  sortable.push([value, chrome_result[value]])
 				sortable.sort(function(a, b) {return  b[1] - a[1]});
-				details.sorted = sortable;
+				this.sorted = sortable;
 				this.details = details;
+				this.result = sortable[0][0];
 				/*console.log("Chrome Weight "+details.Chrome);
 				console.log("Chromium Weight "+details.Chromium);
 				console.log("360SE Weight "+details._360SE);	
@@ -120,4 +121,4 @@ var chrome_weight = {
 			}
 
 }
-chrome_weight();
+chrome_weight.exec();
